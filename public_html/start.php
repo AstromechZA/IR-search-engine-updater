@@ -42,12 +42,11 @@ else
         else
         {
 
-            $cmd = "ruby " . $update_script . " '" . $from->format('Y-m-d\Th:i:s\Z') . "' '" . $to->format('Y-m-d\Th:i:s\Z') . "'";
+            $cmd = "ruby " . $update_script . " -from " . $from->format('Y-m-d\Th:i:s\Z') . " -to " . $to->format('Y-m-d\Th:i:s\Z') . "";
 
-            $out = exec($cmd . " > /dev/null &");
+            $pid = exec($cmd . " > /dev/null & echo $!");
 
-            echo $out;
-
+            echo '{"status":0, "pid": ' . $pid . '}';
         }
     }
     mysqli_close($con);
