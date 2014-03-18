@@ -1,9 +1,10 @@
 <?php
 
-$host = "nightmare.cs.uct.ac.za"
-$user = ""
-$password = ""
-$database = ""
+$host = "nightmare.cs.uct.ac.za";
+$user = "";
+$password = "";
+$database = "";
+$update_script = "./update_ir_index.rb";
 
 ?>
 
