@@ -1,7 +1,10 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+header('Content-Type: application/json; charset=utf-8');
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+header('Cache-Control: no-cache');
+header('Pragma: no-cache');
+header('Access-Control-Allow-Origin: *');
 
 include 'config.php';
 
